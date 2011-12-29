@@ -3,7 +3,6 @@
 require 'rubygems'
 #require 'ruby-debug'
 require 'capybara'
-require 'capybara'
 require 'capybara-webkit'
 require './r_scale'
 require 'fileutils'

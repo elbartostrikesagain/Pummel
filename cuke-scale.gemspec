@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name         = 'cuke-scale'
-  s.version      = '0.0.5'
+  s.version      = '0.0.3'
   s.date         = '2010-04-28'
   s.summary      = "Load testing gem"
   s.description  = "Load test your web app using existing cucumber steps with gherkin."

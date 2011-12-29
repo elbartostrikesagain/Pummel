@@ -1,0 +1,17 @@
+.DS_Store
+.bundle
+db/*.sqlite3
+log/
+tmp/
+.sass-cache/
+.idea/
+spec/javascripts/generated/*
+*.sw?
+.vagrant
+vendor/bundle/*
+public/assets/*
+logfile
+.project
+tags
+nbproject
+.redcar/
