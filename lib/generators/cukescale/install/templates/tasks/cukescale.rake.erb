@@ -1,0 +1,12 @@
+namespace :cukescale do
+  desc "Run load tests"
+  task :run => :prepare_db do
+    puts "hello world"
+  end
+
+  desc "Prepare test db before loadtesting"
+  task :prepare_db do
+    #Add what should be done before load testing
+    puts "TODO prepare db"
+  end
+end

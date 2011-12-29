@@ -1,6 +1,9 @@
 Description:
     Sets up CukeScale in your Rails project.
+    Creates rake tasks
+    Creates cukescale.yml config
     TODO
 
 Examples:
+    rails g cukescale:install
     TODO
