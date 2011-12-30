@@ -5,8 +5,11 @@ require File.expand_path(File.dirname(__FILE__) + '/../../../config/environment'
 
 require 'capybara/session'
 
-# Custom host target other than localhost:3000
+# Custom host target other than http://localhost:3000
 # CukeScale.host = example.com
 
-CukeScale.num_users = 1
-CukeScale.offset = 0
+# Set number of concurrent users (default 1)
+# CukeScale.num_users = 1
+
+# Set user id offset (default 0)
+# CukeScale.offset = 0

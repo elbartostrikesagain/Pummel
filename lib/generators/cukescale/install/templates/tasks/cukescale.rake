@@ -1,10 +1,10 @@
 require 'cuke_scale'
+require File.dirname(__FILE__) + '/../../test/scalability/support/env.rb'
 
 namespace :cukescale do
   desc "Run load tests"
   task :run, [:num_users] => [:prepare_db] do |t, args|
-    test = CukeScale.new args
-    test.run
+    CukeScale.run
   end
 
   desc "Prepare test db before loadtesting"
