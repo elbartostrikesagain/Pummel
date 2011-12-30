@@ -6,7 +6,7 @@ class ScriptRunner
   def initialize(test_num = 0,
                  host = 'http://localhost:3000')
     @session = Capybara::Session.new(:webkit)
-    @test_num = test_num
+    @test_num = test_num.to_i
     @host = host
   end
 
