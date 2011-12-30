@@ -12,7 +12,6 @@ module Cukescale
 
     #TODO generate stuff
     def create_tasks
-      empty_directory 'lib/tasks'
       template 'tasks/cukescale.rake', 'lib/tasks/cukescale.rake'
     end
 
