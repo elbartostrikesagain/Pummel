@@ -12,7 +12,7 @@ CukeScale.rails_root = Rails.root.to_s
 # CukeScale.host = example.com
 
 # Set number of concurrent users (default 1)
-# CukeScale.num_users = 1
+# CukeScale.num_test_iterations = 1
 
-# Set user id offset (default 0)
+# Set test_num offset (default 0)
 # CukeScale.offset = 0

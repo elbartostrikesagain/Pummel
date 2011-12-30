@@ -2,7 +2,7 @@ module CukeScale
 
   #def initialize(args)
   #  config = read_from_config
-  #  @num_users = args[:num_users] || config['num_users']
+  #  @num_test_iterations = args[:num_test_iterations] || config['num_test_iterations']
   #  @host = args[:host] || config['host']
   #  @offset = args[:offset] || config['offset']
   #  @offset = 0 if @offset.nil?
@@ -10,15 +10,16 @@ module CukeScale
   #end
 
   class << self
-    attr_accessor :num_users, :host, :offset, :rails_root
+    attr_accessor :num_test_iterations, :host, :offset, :rails_root
 
     # default values
-    CukeScale.num_users = 1
+    CukeScale.num_test_iterations = 1
     CukeScale.offset = 0
     CukeScale.host = 'http://localhost:3000'
 
     def run
-      num_users.times do |i|
+      raise "Unknown rails_root path. Please define rails_root in test/scalability/support/env.rb" if rails_root.nil? || rails_root == ""
+      num_test_iterations.times do |i|
         exec "#{File.dirname(__FILE__)}/register.rb #{rails_root} #{i+offset} #{host} " if fork.nil?
         sleep 1
       end

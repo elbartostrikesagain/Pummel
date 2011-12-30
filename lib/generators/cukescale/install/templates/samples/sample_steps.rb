@@ -9,5 +9,8 @@ module ScriptSteps
 end
 
 module HelperSteps
+  def email
+    "user#{test_num.to_i+1}@loadtest.com"
+  end
 
 end

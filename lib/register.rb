@@ -4,7 +4,7 @@ require 'rubygems'
 #require 'ruby-debug'
 require 'capybara'
 require 'capybara-webkit'
-Dir.glob(*ARGV[0]+ '/load_tests/*.rb') do |file|
+Dir.glob(*ARGV[0]+ '/test/scalability/*.rb') do |file|
   puts "require: " + file
   require file
 end

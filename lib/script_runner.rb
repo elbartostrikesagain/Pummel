@@ -1,22 +1,13 @@
 class ScriptRunner
-  attr_accessor :id, :host, :email, :password, :new_password, :session
+  attr_accessor :test_num, :host, :session
 
   include Scripts
 
-  def initialize(id = 0,
-                 email = nil,
-                 password = 'password',
+  def initialize(test_num = 0,
                  host = 'http://localhost:3000')
     @session = Capybara::Session.new(:webkit)
-    @id = id
+    @test_num = test_num
     @host = host
-    if email
-      @email = email
-    else
-      @email = "user#{id.to_i+1}@loadtest.com"
-    end
-    @password = password
-    @new_password = "#{password}1"
   end
 
   def run
@@ -26,7 +17,7 @@ class ScriptRunner
       #random_script
     rescue => ex
       #save_and_open_page if session.respond_to?(:save_and_open_page)
-      puts "ERROR, #{id}, \"#{ex.message}\""
+      puts "ERROR, #{test_num}, \"#{ex.message}\""
       puts ex.backtrace
     end
   end
