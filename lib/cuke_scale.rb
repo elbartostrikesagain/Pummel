@@ -1,7 +1,7 @@
 require 'yaml'
 
 class CukeScale
-  attr_accessor :num_users, :host, :offset
+  attr_accessor :num_users, :host, :offset, :rails_root
 
   def initialize(args)
     config = read_from_config
@@ -9,12 +9,12 @@ class CukeScale
     @host = args[:host] || config['host']
     @offset = args[:offset] || config['offset']
     @offset = 0 if @offset.nil?
+    @rails_root = args[:rails_root]
   end
 
   def run
     num_users.times do |i|
-      puts offset
-      exec "#{File.dirname(__FILE__)}/register.rb #{i+offset} #{host} " if fork.nil?
+      exec "#{File.dirname(__FILE__)}/register.rb #{rails_root} #{i+offset} #{host} " if fork.nil?
       sleep 1
     end
   end

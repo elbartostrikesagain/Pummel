@@ -1,16 +1,6 @@
-  Dir.glob(File.dirname(__FILE__) + '/steps/*') do |file|
-  require file
-end
-
-Dir.glob(File.dirname(__FILE__) + '/scripts/*') do |file|
-  require file
-end
-
 class ScriptRunner
   attr_accessor :id, :host, :email, :password, :new_password, :session
 
-  include HelperSteps
-  include ScriptSteps
   include Scripts
 
   def initialize(id = 0,

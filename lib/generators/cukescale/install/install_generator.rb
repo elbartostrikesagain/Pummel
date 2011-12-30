@@ -13,5 +13,11 @@ module Cukescale
       template 'config/cukescale.yml.erb', 'config/cukescale.yml'
     end
 
+    def create_test_sample
+      empty_directory 'load_tests/steps'
+      template 'load_tests/sample_script.rb.erb', 'load_tests/sample_script.rb'
+      template 'load_tests/steps/sample_steps.rb.erb', 'load_tests/steps/sample_steps.rb'
+    end
+
   end
 end
