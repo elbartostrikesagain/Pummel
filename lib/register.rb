@@ -12,6 +12,6 @@ require 'script_runner'
 require 'fileutils'
 
 if File.basename($0) == File.basename(__FILE__)
-  test = ScriptRunner.new *ARGV.shift()
+  test = ScriptRunner.new *ARGV.pop()
   test.run
 end

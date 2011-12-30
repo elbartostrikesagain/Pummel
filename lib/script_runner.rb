@@ -22,7 +22,7 @@ class ScriptRunner
   def run
     begin
       puts "Run script here"
-      #user_path_script
+      user_path_script
       #random_script
     rescue => ex
       #save_and_open_page if session.respond_to?(:save_and_open_page)
