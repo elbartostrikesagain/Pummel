@@ -1,7 +1,10 @@
+require 'cuke_scale'
+
 namespace :cukescale do
   desc "Run load tests"
-  task :run => :prepare_db do
-    puts "hello world"
+  task :run, [:num_users] => [:prepare_db] do |t, args|
+    test = CukeScale.new args
+    test.run
   end
 
   desc "Prepare test db before loadtesting"
