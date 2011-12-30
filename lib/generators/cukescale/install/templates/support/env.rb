@@ -5,6 +5,9 @@ require File.expand_path(File.dirname(__FILE__) + '/../../../config/environment'
 
 require 'capybara/session'
 
+#required. TODO: this is hacky
+CukeScale.rails_root = Rails.root.to_s
+
 # Custom host target other than http://localhost:3000
 # CukeScale.host = example.com
 
