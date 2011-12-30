@@ -4,9 +4,6 @@ module Cukescale
     source_root File.expand_path("../templates", __FILE__)
 
     def create_env_rb
-      empty_directory 'test'
-      empty_directory 'test/scalability'
-      empty_directory 'test/scalability/support'
       template 'support/env.rb', 'test/scalability/support/env.rb'
     end
 
