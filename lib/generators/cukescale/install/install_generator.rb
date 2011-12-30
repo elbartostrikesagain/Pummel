@@ -3,20 +3,23 @@ module Cukescale
     #Cukescale::InstallGenerator.source_root(File.expand_path("../templates", __FILE__))
     source_root File.expand_path("../templates", __FILE__)
 
+    def create_env_rb
+      empty_directory 'test'
+      empty_directory 'test/scalability'
+      empty_directory 'test/scalability/support'
+      template 'support/env.rb', 'test/scalability/support/env.rb'
+    end
+
     #TODO generate stuff
     def create_tasks
       empty_directory 'lib/tasks'
-      template 'tasks/cukescale.rake.erb', 'lib/tasks/cukescale.rake'
-    end
-
-    def create_templates
-      template 'config/cukescale.yml.erb', 'config/cukescale.yml'
+      template 'tasks/cukescale.rake', 'lib/tasks/cukescale.rake'
     end
 
     def create_test_sample
-      empty_directory 'load_tests/steps'
-      template 'load_tests/sample_script.rb.erb', 'load_tests/sample_script.rb'
-      template 'load_tests/steps/sample_steps.rb.erb', 'load_tests/steps/sample_steps.rb'
+      empty_directory 'test/scalability/steps'
+      template 'samples/sample_script.rb', 'test/scalability/sample_script.rb'
+      template 'samples/steps/sample_steps.rb', 'test/scalability/steps/sample_steps.rb'
     end
 
   end
