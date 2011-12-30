@@ -1,5 +1,4 @@
 Dir.glob(File.dirname(__FILE__) + '/steps/*') do |file|
-  puts "require: " + file
   require file
 end
 

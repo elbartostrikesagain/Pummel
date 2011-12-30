@@ -5,7 +5,6 @@ require 'rubygems'
 require 'capybara'
 require 'capybara-webkit'
 Dir.glob(*ARGV[0]+ '/test/scalability/*.rb') do |file|
-  puts "require: " + file
   require file
 end
 require 'script_runner'
