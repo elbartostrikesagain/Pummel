@@ -1,4 +1,4 @@
-module CukeScale
+module Pummel
 
   #def initialize(args)
   #  config = read_from_config
@@ -13,9 +13,9 @@ module CukeScale
     attr_accessor :num_test_iterations, :host, :offset, :rails_root
 
     # default values
-    CukeScale.num_test_iterations = 1
-    CukeScale.offset = 0
-    CukeScale.host = 'http://localhost:3000'
+    Pummel.num_test_iterations = 1
+    Pummel.offset = 0
+    Pummel.host = 'http://localhost:3000'
 
     def run
       raise "Unknown rails_root path. Please define rails_root in test/scalability/support/env.rb" if rails_root.nil? || rails_root == ""

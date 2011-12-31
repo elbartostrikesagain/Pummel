@@ -1,6 +1,6 @@
-module Cukescale
+module Pummel
   class InstallGenerator < Rails::Generators::Base
-    #Cukescale::InstallGenerator.source_root(File.expand_path("../templates", __FILE__))
+    #Pummel::InstallGenerator.source_root(File.expand_path("../templates", __FILE__))
     source_root File.expand_path("../templates", __FILE__)
 
     def create_env_rb
@@ -9,7 +9,7 @@ module Cukescale
 
     #TODO generate stuff
     def create_tasks
-      template 'tasks/cukescale.rake', 'lib/tasks/cukescale.rake'
+      template 'tasks/pummel.rake', 'lib/tasks/pummel.rake'
     end
 
     def create_test_sample

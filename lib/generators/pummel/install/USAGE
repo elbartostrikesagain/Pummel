@@ -1,0 +1,5 @@
+Description:
+    Sets up Pummel in your Rails project.
+
+Examples:
+    rails g pummel:install
