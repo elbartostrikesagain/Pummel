@@ -11,7 +11,7 @@ module Scripts
     sleep(seconds * scalar)
   end
 
-  def user_path_script
+  def run_script
     sign_in
   end
 
