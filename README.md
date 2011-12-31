@@ -28,9 +28,11 @@ Or, if you're developing:
 
 
 
-##Examples/Hints:
+##Examples/Hints/Notes:
 
 In your steps, use the "test_num" variable to offset things like users.
+
+Currently the gem only supports one script to run. This script must be in test/scalability, be a module named Script and have a method run_script
 
 
 
